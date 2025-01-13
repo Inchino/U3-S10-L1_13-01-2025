@@ -58,7 +58,10 @@ class BookList extends Component {
           {/* Colonna di destra: area commenti */}
           <Col xs={12} md={4}>
             {this.state.selectedBook ? (
-              <CommentArea asin={this.state.selectedBook} />
+              <CommentArea
+                asin={this.state.selectedBook}
+                key={this.state.selectedBook}
+              />
             ) : (
               <div className="text-center text-muted">
                 <p>Seleziona un libro per vedere i commenti</p>
